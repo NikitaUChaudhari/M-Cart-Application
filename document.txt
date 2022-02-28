@@ -1,7 +1,0 @@
-mCart is an online shoppig application that helps the users 
-to purchase various products.This application allows users to log 
-in for purchasing mobiles,books,electronics devices etc.They can 
-select the products and add them into the cart.Once the selection 
-is done,they can go to the cart page for payment where they can 
-select payment mode and checkout the purchase. They can can search
-for product,filter the products list based on the type of products.
