@@ -1,0 +1,30 @@
+<Formik
+        enableReinitialize
+        initialValues={UserInitials}
+        validationSchema={Validation_Schema}
+        onSubmit={loginuser}
+    >
+        {({ values, handleChange, errors, setFieldTouched, touched, isValid, handleSubmit, }) => (
+            <Form>		
+                <TextField id="email" label="Enter email address" className="myInput"
+                    value={values.email}
+                    onChange={handleChange("email")}
+                    onBlur={() => setFieldTouched("email")}
+                    onChangeCapture={(e) => (setemail(e.target.value))}
+                />
+                {errors.email && touched.email ? <div className="errmsg">{errors.email}</div> : null}
+
+                <TextField id="password" label="Enter Your Password" className="myInput"
+                    value={values.password}
+                    onChange={handleChange("password")}
+                    onBlur={() => setFieldTouched("password")}
+                    onChangeCapture={(e) => (setpassword(e.target.value))}
+                />
+                {errors.password && touched.password ? <div className="errmsg">{errors.password}</div> : null}
+
+                <Button variant="contained" color="primary"  disabled={!isValid} onClick={(e) => handleSubmit(e)} >
+                    Sign In
+                </Button>
+            </Form>
+      )}
+    </Formik>
